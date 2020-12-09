@@ -1,13 +1,17 @@
+#import game functions
 from random import *
 import tkinter as tk
 
+#create variable with possible answers
 Answer = choice(["As i see it, yes.","Ask again later.","Better not tell you know.","Cannot predict now.","Concentrate and ask again.","Don't count on it.","It is certain.","It is decidedly so.","Most Likely.","My reply is no.","My sources say no.","Outlook not so good.","Outlook good.","Reply hazy, try again.","Signs point to yes.","Very doubtful.","Without a doubt.","Yes.","Yes... definitely.","You may rely on it."])
 
+#form window 
 root= tk.Tk()
 root.title('Magic 8 Ball - Decision Maker')
 canvas1 = tk.Canvas(root, width = 400, height = 300,  relief = 'raised')
 canvas1.pack()
 
+#add buttons and titles to said window
 label1 = tk.Label(root, text='Magic 8 Ball - Decision Maker')
 label1.config(font=('helvetica', 14))
 canvas1.create_window(200, 25, window=label1)
@@ -19,6 +23,7 @@ canvas1.create_window(200, 100, window=label2)
 entry1 = tk.Entry (root) 
 canvas1.create_window(200, 140, window=entry1)
 
+#forms function to answer questions with random answers from LN:6 and writes answer to said window
 def AnswerQuestion ():
     
     label3 = tk.Label(root, text= 'Answer to you question is:',font=('helvetica', 10))
