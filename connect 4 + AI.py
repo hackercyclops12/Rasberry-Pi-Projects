@@ -1,9 +1,11 @@
+#import functions
 import numpy as np
 import random
 import pygame
 import sys
 import math
 
+#define variables
 BLUE = (60,60,255)
 BLACK = (180,180,180)
 RED = (255,0,0)
@@ -21,6 +23,7 @@ AI_PIECE = 2
 
 WINDOW_LENGTH = 4
 
+#define functions
 def create_board():
     board = np.zeros((ROW_COUNT,COLUMN_COUNT))
     return board
