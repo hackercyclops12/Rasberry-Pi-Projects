@@ -1,8 +1,10 @@
+#import functions
 import numpy as np
 import pygame
 import sys
 import math
 
+#set some basic variables 
 BLUE = (0,0,255)
 BLACK = (0,0,0)
 RED = (255,0,0)
@@ -11,6 +13,7 @@ YELLOW = (255,255,0)
 ROW_COUNT = 6
 COLUMN_COUNT = 7
 
+#create games functions
 def create_board():
     board = np.zeros((ROW_COUNT,COLUMN_COUNT))
     return board
@@ -68,7 +71,7 @@ def draw_board(board):
                 pygame.draw.circle(screen, YELLOW, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
     pygame.display.update()
 
-
+#Create some more complicated variables
 board = create_board()
 print_board(board)
 game_over = False
@@ -91,6 +94,7 @@ pygame.display.update()
 
 myfont = pygame.font.SysFont("monospace", 75)
 
+#Game loop
 while not game_over:
 
     for event in pygame.event.get():
