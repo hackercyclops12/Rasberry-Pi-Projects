@@ -1,8 +1,11 @@
+#import functions
 from math import inf as infinity
 from random import choice
 import platform
 import time
 from os import system
+
+#define important variables
 HUMAN = -1
 COMP = +1
 board = [
@@ -10,6 +13,8 @@ board = [
     [0, 0, 0],
     [0, 0, 0],
 ]
+
+#game and AI loop
 def evaluate(state):
     if wins(state, COMP):
         score = +1
